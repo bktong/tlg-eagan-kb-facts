@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The Little Gym of Eagan — Facts</title>
+<meta name="description" content="Hours, pricing, ages, and policies for The Little Gym of Eagan."/>
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32" type="image/x-icon"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<!--
+  facts.html — The Little Gym of Eagan customer-facing facts page.
+
+  PURPOSE: single canonical, human-readable page of customer-facing facts
+  (hours, pricing, ages, policies, parties, camps) meant to be crawled by
+  GHL's Voice AI Knowledge Base (Web Crawler source, Auto Refresh daily) so
+  the "Kendall" call agent answers from real facts instead of anything
+  hardcoded into her own script. See ops/runbooks/ghl-ai-call-agent.md,
+  "Hard-truths facts file" and "GHL Knowledge Base" sections, for the full
+  design reasoning.
+
+  SOURCE OF TRUTH this page mirrors: gyms/eaganmn/gym.json -> publicFacts.
+  This is a HAND-AUTHORED rendering, not auto-generated (same pattern as
+  welcome-guide.html) — if gym.json's publicFacts changes, this page needs
+  a matching manual edit. Last synced against gym.json: 2026-08-02.
+
+  Deliberately NOT included: day-by-day class schedule/availability. That
+  changes constantly and is served live from schedule.json instead — a
+  crawled-and-cached page is the wrong mechanism for it (see the main
+  runbook's two-path data architecture: static facts via this page,
+  dynamic availability via a live schedule.json fetch during the call).
+
+  Deliberately NOT included: anything hiring/pay-related. Scope is
+  customer-facing only, by design — hiring questions route to a human,
+  never answered by the AI (see the main runbook's hiring-routing section).
+-->
+<style>
+  :root{
+    --blue:#0077C0; --navy:#005a92; --orange:#F47620; --purple:#5261AC;
+    --lime:#D6D22F; --teal:#3FC0C3; --magenta:#ED1C8F; --green:#98C23D;
+    --sea:#007761; --ink:#33383F; --muted:#6B727C; --bg:#dfe7ef;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; font-family:'Nunito',system-ui,-apple-system,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.6;
+  }
+  .brandbar{
+    height:9px;
+    background:linear-gradient(90deg,
+      var(--orange) 0 14%, var(--lime) 14% 28%, var(--green) 28% 42%,
+      var(--teal) 42% 57%, var(--blue) 57% 71%, var(--purple) 71% 85%,
+      var(--magenta) 85% 100%);
+  }
+  main{
+    max-width:720px; margin:0 auto; padding:2.2rem 1.4rem 3rem;
+  }
+  header.hero{
+    background:linear-gradient(100deg,var(--blue),#2E9BC8 55%,var(--teal));
+    color:#fff; border-radius:16px; padding:1.8rem 1.6rem; margin-bottom:1.8rem;
+  }
+  header.hero h1{ margin:0 0 .35rem; font-size:1.5rem; font-weight:900; }
+  header.hero p{ margin:0; opacity:.95; font-size:.98rem; }
+  section{
+    background:#fff; border-radius:14px; padding:1.4rem 1.5rem;
+    margin-bottom:1.1rem; box-shadow:0 2px 10px rgba(20,40,70,.06);
+  }
+  section h2{
+    margin:0 0 .7rem; font-size:1.08rem; font-weight:800; color:var(--navy);
+    display:flex; align-items:center; gap:.5rem;
+  }
+  section h2 .dot{ width:10px; height:10px; border-radius:50%; background:var(--orange); flex:none; }
+  p{ margin:0 0 .6rem; }
+  p:last-child{ margin-bottom:0; }
+  ul{ margin:.2rem 0 0; padding-left:1.15rem; }
+  li{ margin-bottom:.35rem; }
+  .fact-row{ display:flex; gap:.6rem; margin-bottom:.4rem; flex-wrap:wrap; }
+  .fact-row .k{ font-weight:800; color:var(--navy); min-width:9.5em; }
+  .fact-row .v{ flex:1; min-width:200px; }
+  a{ color:var(--blue); font-weight:700; text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .pill{
+    display:inline-block; background:#eef6fb; color:var(--navy);
+    border-radius:999px; padding:.15rem .65rem; font-size:.85rem; font-weight:700;
+    margin:.15rem .3rem .15rem 0;
+  }
+  .note{
+    font-size:.86rem; color:var(--muted); border-left:3px solid var(--lime);
+    padding-left:.7rem; margin-top:.6rem;
+  }
+  footer{
+    text-align:center; color:var(--muted); font-size:.82rem; margin-top:1.6rem;
+  }
+</style>
+</head>
+<body>
+<div class="brandbar"></div>
+<main>
+
+  <header class="hero">
+    <h1>The Little Gym of Eagan</h1>
+    <p>We help children ages 6 months to 12 years grow strong, confident, and happy through gymnastics-based classes, camps, and birthday parties — built around motor skill development, early learning, and social-emotional growth.</p>
+  </header>
+
+  <section>
+    <h2><span class="dot"></span>Hours</h2>
+    <ul>
+      <li>Monday: 9:00am – 7:30pm</li>
+      <li>Tuesday: 9:00am – 7:30pm</li>
+      <li>Wednesday: 3:00pm – 7:30pm</li>
+      <li>Thursday: 9:00am – 7:30pm</li>
+      <li>Friday: Closed</li>
+      <li>Saturday: 8:00am – 1:00pm</li>
+      <li>Sunday: 9:00am – 12:30pm</li>
+    </ul>
+    <p class="note">Wednesday opens later (3pm) and Friday is closed — easy to miss, worth stating plainly.</p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Contact &amp; Location</h2>
+    <div class="fact-row"><div class="k">Address</div><div class="v">1380 Duckwood Drive, Suite 110, Eagan, MN 55123</div></div>
+    <div class="fact-row"><div class="k">Phone / Text</div><div class="v">(651) 515-0234</div></div>
+    <div class="fact-row"><div class="k">Email</div><div class="v">tlgeaganmn@thelittlegym.com</div></div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Ages &amp; Programs</h2>
+    <p>Ages <strong>6 months to 12 years</strong>. Parent &amp; Child, Pre-K, and Grade School classes — no Tummy Time or Bugs programs at this location, so nothing is bookable below our youngest class tier.</p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Trying a Class</h2>
+    <div class="fact-row"><div class="k">Intro class price</div><div class="v">$20</div></div>
+    <p class="note">Availability changes constantly — this page intentionally doesn't state which days/times are open. Ask for current availability instead of quoting a fixed schedule from here.</p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Birthday Parties</h2>
+    <p>Completely hassle-free — our staff runs the whole thing start to finish. Honestly, all you bring is the cupcakes.</p>
+    <p>90 minutes total — 60 minutes in the gym, 30 minutes after in our party room for snacks and drinks. We handle decorations, drinks, table setup, and cleanup.</p>
+    <div class="fact-row"><div class="k">Price</div><div class="v">$400</div></div>
+    <div class="fact-row"><div class="k">Theme upgrade</div><div class="v">$475</div></div>
+    <div class="fact-row"><div class="k">Available slots</div><div class="v">Saturdays and Sundays, 2:30pm or 5:00pm</div></div>
+    <div class="fact-row"><div class="k">Book</div><div class="v"><a href="https://tlgurl.com/bday">tlgurl.com/bday</a></div></div>
+    <div class="fact-row"><div class="k">Party guide</div><div class="v"><a href="https://tlgeagan.com/Eagan_Bday_Guide.pdf">Eagan_Bday_Guide.pdf</a></div></div>
+    <p class="note">The booking link opens to a day's schedule, not one specific time slot — pair it with the exact class/time when quoting a booking.</p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Camps</h2>
+    <p>Our camp season is wrapping up for this year — the last camp is the week of <strong>August 24–28, 2026</strong>. Nothing is currently scheduled after that.</p>
+    <div class="fact-row"><div class="k">Book</div><div class="v"><a href="https://tlgurl.com/camps">tlgurl.com/camps</a></div></div>
+    <p class="note">This is a seasonal fact that changes — check it's still current before relying on the dates above; this page doesn't update itself.</p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Events Calendar</h2>
+    <p>Open gyms, member events, and anything else happening at the gym beyond regular classes — the calendar is the live, up-to-date source, not this page.</p>
+    <div class="fact-row"><div class="k">Calendar</div><div class="v"><a href="https://www.tlgeagan.com/calendar/calendar.html">tlgeagan.com/calendar</a></div></div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>What Makes Us Us</h2>
+    <p>Our core philosophy is called Three-Dimensional Learning — every class fosters growth in three dimensions: physical, mental, and social/emotional.</p>
+    <p>
+      <span class="pill">LGBTQ+ friendly</span>
+      <span class="pill">Women-owned</span>
+      <span class="pill">Asian-owned</span>
+      <span class="pill">4.9★ Google rating</span>
+    </p>
+    <p><a href="https://maps.app.goo.gl/DLRo7oLDLNRKQLrK6">Google Business listing</a> · <a href="https://g.page/r/CSZqSKY7sPoCEBE/review">Leave a review</a></p>
+  </section>
+
+  <footer>
+    Facts current as of 2026-08-02. Source of truth: <code>gyms/eaganmn/gym.json</code> in the <code>tlg_web_brand_kit</code> repo.
+  </footer>
+
+</main>
+</body>
+</html>
