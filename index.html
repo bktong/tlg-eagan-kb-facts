@@ -25,11 +25,20 @@
   welcome-guide.html) — if gym.json's publicFacts changes, this page needs
   a matching manual edit. Last synced against gym.json: 2026-08-02.
 
-  Deliberately NOT included: day-by-day class schedule/availability. That
-  changes constantly and is served live from schedule.json instead — a
-  crawled-and-cached page is the wrong mechanism for it (see the main
-  runbook's two-path data architecture: static facts via this page,
-  dynamic availability via a live schedule.json fetch during the call).
+  CLASS SCHEDULE: the "Typical Weekly Class Times" table below is the
+  RECURRING weekly pattern (which tier runs which day/time), not live
+  seat-by-seat capacity — Bert's call (2026-08-04): the weekly pattern
+  barely changes, so a live schedule.json lookup mid-call isn't worth
+  building (a GHL Voice AI Custom Action can only POST, schedule.json is
+  GET-only, so a live version would've needed new server infra — see
+  ops/runbooks/ghl-ai-call-agent.md for the full "why not live" reasoning
+  this superseded). Derived by eyeballing the current
+  https://www.tlgeagan.com/welcome/schedule.json rolling window and
+  grouping into the same three tiers intro-booking.html's own picker
+  uses. Re-derive and hand-edit this table if the actual weekly pattern
+  changes — it is NOT auto-generated and does not update itself.
+  Exact seat availability always still routes through the self-book link
+  or a live person, never claimed as confirmed from this page alone.
 
   Deliberately NOT included: anything hiring/pay-related. Scope is
   customer-facing only, by design — hiring questions route to a human,
@@ -133,7 +142,38 @@
   <section>
     <h2><span class="dot"></span>Trying a Class</h2>
     <div class="fact-row"><div class="k">Intro class price</div><div class="v">$20</div></div>
-    <p class="note">Availability changes constantly — this page intentionally doesn't state which days/times are open. Ask for current availability instead of quoting a fixed schedule from here.</p>
+
+    <p style="margin-top:1rem;"><strong>Typical Weekly Class Times</strong> — the recurring pattern, not a live seat count. Ask which age tier fits, then mention the usual day/time for that tier; always confirm the exact spot via the booking link or a live person, since a specific class can fill up or shift.</p>
+
+    <div class="fact-row"><div class="k">Parent &amp; Child</div><div class="v">6 – 36 months, parent on the mat</div></div>
+    <ul>
+      <li>Mon: 10:15am, 12:10pm</li>
+      <li>Tue: 9:10am, 10:00am</li>
+      <li>Wed: 4:10pm, 5:00pm, 5:45pm</li>
+      <li>Thu: 9:15am, 10:15am</li>
+      <li>Sat: 8:30am, 9:15am, 10:00am</li>
+      <li>Sun: 8:45am, 9:30am, 10:15am</li>
+    </ul>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Pre-K</div><div class="v">3 – 6 yrs, child solo</div></div>
+    <ul>
+      <li>Mon: 11:15am, 4:15pm, 5:20pm</li>
+      <li>Tue: 10:50am, 4:10pm, 5:05pm</li>
+      <li>Wed: 6:30pm</li>
+      <li>Thu: 11:10am, 4:45pm, 5:40pm</li>
+      <li>Sat: 10:45am, 11:40am</li>
+      <li>Sun: 11:10am</li>
+    </ul>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Grade School</div><div class="v">6 – 12 yrs, skills program</div></div>
+    <ul>
+      <li>Mon: 6:30pm</li>
+      <li>Tue: 6:15pm</li>
+      <li>Thu: 6:45pm</li>
+      <li>Sun: 12:10pm</li>
+    </ul>
+
+    <p class="note">Derived from the live schedule on 2026-08-04 — a recurring pattern, not a promise. Fridays have no classes at this location (matches the Hours section above). No class runs Wednesday morning (Wednesday itself opens at 3pm).</p>
   </section>
 
   <section>
@@ -174,7 +214,7 @@
   </section>
 
   <footer>
-    Facts current as of 2026-08-02. Source of truth: <code>gyms/eaganmn/gym.json</code> in the <code>tlg_web_brand_kit</code> repo.
+    Facts current as of 2026-08-04. Source of truth: <code>gyms/eaganmn/gym.json</code> in the <code>tlg_web_brand_kit</code> repo; weekly class-time pattern hand-derived from <code>schedule.json</code>.
   </footer>
 
 </main>
