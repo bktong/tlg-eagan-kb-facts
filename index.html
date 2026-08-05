@@ -44,6 +44,35 @@
   Exact seat availability always still routes through the self-book link
   or a live person, never claimed as confirmed from this page alone.
 
+  CLASS DESCRIPTIONS + PHILOSOPHY (added 2026-08-05): captured directly
+  from Bert in a recorded working session, plus official program goal
+  statements for Birds / Beasts / Super Beasts relayed from Randy. Two
+  editorial calls made in the write-up, both flagged to Bert:
+    1. Bert described Birds as using "peer pressure" to build confidence.
+       Accurate internally, but it reads badly to a parent hearing it cold
+       on a phone call, so it's rendered as "seeing other kids doing the
+       same things... is a big part of what builds their confidence."
+       Same mechanism, safer on a call.
+    2. The post-Twisters referral to a competitive gymnastics program is
+       marked "only bring this up if a parent asks" — it's a
+       we'd-send-you-elsewhere message and shouldn't be volunteered.
+  Class structure facts (lengths, ages-out, parent-in-class, combined
+  classes, aging up) are ported from welcome-guide.html, which already
+  had them customer-facing; they were previously missing here entirely.
+
+  AGE RANGES: taken from the live schedule feed (schedule.json), NOT from
+  welcome-guide.html. The guide says Beasts ages out at 35 months, but the
+  live feed says Beasts 19-30 months and Super Beasts 29-36 months, and
+  the feed matches how Bert describes Super Beasts ("two and a half to
+  three"). Flagged to Bert as an unresolved conflict in the guide —
+  fix the guide, don't copy it here.
+
+  Deliberately NOT included: membership pricing. The Welcome Guide has it
+  ($135 Basic / $230 Premium / $50 registration) but those rates take
+  effect 2026-09-01, and whether Kendall should quote membership pricing
+  at all — and which rate before September 1 — is an open question for
+  Bert. Do not add it until that's decided.
+
   Deliberately NOT included: anything hiring/pay-related. Scope is
   customer-facing only, by design — hiring questions route to a human,
   never answered by the AI (see the main runbook's hiring-routing section).
@@ -144,6 +173,61 @@
   </section>
 
   <section>
+    <h2><span class="dot"></span>Our Philosophy</h2>
+    <p>The Little Gym is a <strong>recreational gymnastics program focused on whole-child development</strong>. We think about it in three tiers — mental, physical, and social/emotional — and we use gymnastics as the platform to develop the whole child.</p>
+    <p>Everything runs on positive reinforcement and progression. Two things we want every child to learn: how to <strong>fail safely and confidently</strong> in a safe environment, and how to <strong>take a challenge head-on, one step at a time</strong>, until they overcome it.</p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>About Each Class</h2>
+
+    <p style="margin-bottom:1rem;">Our classes run as a progression. Each one prepares a child for the next, and the handoffs are deliberate.</p>
+
+    <p style="margin:.9rem 0 .2rem;"><strong>Parent &amp; Child</strong> <span style="font-weight:400;color:var(--muted);">— you're on the mat together, 45 minutes</span></p>
+
+    <div class="fact-row"><div class="k">Birds</div><div class="v">6 – 20 months · ages out at 20 months</div></div>
+    <p>A warm, safe, nurturing environment for crawlers and walkers, where children and parents grow skills and build confidence together, connecting music and movement into an engaging experience. Mostly one-year-olds. The focus is gross motor skills and a first introduction to being around other children. Seeing other kids doing the same things, or slightly more advanced things, is a big part of what builds their confidence in their own steps, movements, and body.</p>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Beasts</div><div class="v">19 – 30 months · parent still on the mat</div></div>
+    <p>The same warm, safe, nurturing environment, now built for toddlers, with parents and children growing skills and building confidence together through music and movement. This is where we start developing a little independence from parents, the confidence to try something, fail at it, and work to improve, and the first fundamental building blocks of gymnastics movement.</p>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Super Beasts</div><div class="v">29 – 36 months (about 2½ to 3) · ages out at 3</div></div>
+    <p>A warm, safe, nurturing, and supportive environment where children grow skills and build confidence <em>at their own pace, through experimenting</em>, using music, movement, and fun challenges to build a love of learning and get them ready for school.</p>
+    <p><strong>This is the independence class.</strong> Parents stop spotting heavily here. The job shifts to following along and keeping their child safe rather than guiding every movement. It's as much a transition for the parent as the child, because by the time a child turns three, we want parents comfortable watching from the lobby, and children able to take direction from a coach rather than only from a parent or guardian.</p>
+
+    <p style="margin:1.2rem 0 .2rem;"><strong>Pre-K</strong> <span style="font-weight:400;color:var(--muted);">— your child on the mat, coach-led, parent not in class</span></p>
+
+    <div class="fact-row"><div class="k">Funny Bugs</div><div class="v">3 – 4 yrs · ages out at 4 · 50 minutes</div></div>
+    <p><strong>The biggest bridge in the whole program.</strong> This is the first time a child goes into class on their own, without a parent, and we're taking away the safety net of mom and dad for the first time ever. We work on social norms — taking turns, sharing, not cutting in line — and on mental fortitude in the face of a challenging skill or position. Everything is incremental progression with positive reinforcement, and then the gymnastics itself on top of that.</p>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Giggle Worms</div><div class="v">ages out at 5 · 60 minutes</div></div>
+    <p>A step up from Funny Bugs. Here we start using the real, foundational language of gymnastics and calling things what they actually are, while still keeping it fun and playful enough that their imagination does a lot of the work. By this point we're actively working skill progression on their fundamental gymnastics skills.</p>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Good Friends</div><div class="v">5 yrs · ages out at 6 · 60 minutes</div></div>
+    <p>The bridge year into Grade School. This is where we start really understanding each child's individual skill level. A more advanced Good Friend may get invited into a Grade School class early. A child who needs more time gets focused progressions on exactly the skills they need. The goal is that every child leaves with the full fundamental skill set to work with.</p>
+
+    <p style="margin:1.2rem 0 .2rem;"><strong>Grade School</strong> <span style="font-weight:400;color:var(--muted);">— bars, beam, and floor, 60 minutes, parent not in class</span></p>
+    <p style="margin-bottom:.6rem;">Both Grade School classes share the same 6 to 12 age range. They're separated by <strong>experience, not age.</strong></p>
+
+    <div class="fact-row"><div class="k">Flips / Hot Shots</div><div class="v">6 – 12 yrs · entry level</div></div>
+    <p>Any skill level is welcome. Ideally a child arrives with a fundamental understanding of the gymnastics skills, but if not, that's fine — we take the progression from wherever they are and move forward with what the child is willing to do. What we do expect at this level is that a child understands basic social norms and can take direction from an instructor. The goal here is fine-tuning each movement with precise points of detail.</p>
+
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Twisters</div><div class="v">6 – 12 yrs · intermediate</div></div>
+    <p>Our intermediate Grade School class, for kids who are progressing well and want to work on more advanced skills.</p>
+
+    <p class="note">Twisters is the most advanced class we offer. If a child progresses beyond it and is ready for more, we're glad to point the family toward a competitive gymnastics program where they can keep advancing. <strong>Only bring this up if a parent asks what comes after Twisters.</strong></p>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Combined Classes &amp; Moving Up</h2>
+    <p><strong>Some classes run combined.</strong> Depending on the day and time, you may see Beasts and Super Beasts together, Funny Bugs with Giggle Worms, or Flips with Hot Shots. Combined classes are staffed and paced for the whole range, so a child still gets stations and coaching pitched to where they are.</p>
+    <p><strong>Aging out isn't a hard stop.</strong> Placement isn't only about the birthday — readiness matters too, and the classes on either side of a move overlap a little by design.</p>
+    <p><strong>Moving up.</strong> When a child is getting close to aging out, we work with the family to find the right next class for their schedule and needs. If the days and times that work for a family are limited, we'd rather talk about it <strong>about 30 days before</strong> the move so it can be planned together.</p>
+    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Class lengths</div><div class="v">45 min Parent &amp; Child · 50 min Funny Bugs · 60 min everything else</div></div>
+    <div class="fact-row"><div class="k">Parent in class?</div><div class="v">Yes for Parent &amp; Child · No for Pre-K and Grade School</div></div>
+  </section>
+
+  <section>
     <h2><span class="dot"></span>Trying a Class</h2>
     <div class="fact-row"><div class="k">Intro class price</div><div class="v">$20</div></div>
 
@@ -217,7 +301,7 @@
   </section>
 
   <footer>
-    Facts current as of 2026-08-04. Source of truth: <code>gyms/eaganmn/gym.json</code> in the <code>tlg_web_brand_kit</code> repo; weekly class-time pattern hand-derived from <code>schedule.json</code>.
+    Facts current as of 2026-08-05. Source of truth: <code>gyms/eaganmn/gym.json</code> in the <code>tlg_web_brand_kit</code> repo; weekly class-time pattern hand-derived from <code>schedule.json</code>.
   </footer>
 
 </main>
