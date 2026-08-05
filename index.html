@@ -60,12 +60,18 @@
   classes, aging up) are ported from welcome-guide.html, which already
   had them customer-facing; they were previously missing here entirely.
 
-  AGE RANGES: taken from the live schedule feed (schedule.json), NOT from
-  welcome-guide.html. The guide says Beasts ages out at 35 months, but the
-  live feed says Beasts 19-30 months and Super Beasts 29-36 months, and
-  the feed matches how Bert describes Super Beasts ("two and a half to
-  three"). Flagged to Bert as an unresolved conflict in the guide —
-  fix the guide, don't copy it here.
+  AGE RANGES for the Parent & Child classes are BERT'S RULING (2026-08-05),
+  which overrides both other sources — they disagreed and he settled it:
+    Birds 6-20 months · Beasts 20-30 months · Super Beasts 30-36 months
+  Clean handoffs at 20 and 30 months, no gaps or overlaps. For reference,
+  what he overrode: welcome-guide.html said Beasts ages out at 35 months
+  (clearly wrong, it collides with Super Beasts), and the live
+  schedule.json feed says Beasts 19-30 / Super Beasts 29-36 (off by one
+  month at each boundary, probably an artifact of how the storefront
+  encodes ranges). **Both of those are now stale relative to this page.**
+  Worth fixing welcome-guide.html to match; schedule.json is generated
+  from the storefront so it can't be hand-edited, and its one-month
+  fuzziness at the boundary is harmless for booking.
 
   Deliberately NOT included: membership pricing. The Welcome Guide has it
   ($135 Basic / $230 Premium / $50 registration) but those rates take
@@ -188,10 +194,10 @@
     <div class="fact-row"><div class="k">Birds</div><div class="v">6 – 20 months · ages out at 20 months</div></div>
     <p>A warm, safe, nurturing environment for crawlers and walkers, where children and parents grow skills and build confidence together, connecting music and movement into an engaging experience. Mostly one-year-olds. The focus is gross motor skills and a first introduction to being around other children. Seeing other kids doing the same things, or slightly more advanced things, is a big part of what builds their confidence in their own steps, movements, and body.</p>
 
-    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Beasts</div><div class="v">19 – 30 months · parent still on the mat</div></div>
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Beasts</div><div class="v">20 – 30 months · parent still on the mat</div></div>
     <p>The same warm, safe, nurturing environment, now built for toddlers, with parents and children growing skills and building confidence together through music and movement. This is where we start developing a little independence from parents, the confidence to try something, fail at it, and work to improve, and the first fundamental building blocks of gymnastics movement.</p>
 
-    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Super Beasts</div><div class="v">29 – 36 months (about 2½ to 3) · ages out at 3</div></div>
+    <div class="fact-row" style="margin-top:.8rem;"><div class="k">Super Beasts</div><div class="v">30 – 36 months (about 2½ to 3) · ages out at 3</div></div>
     <p>A warm, safe, nurturing, and supportive environment where children grow skills and build confidence <em>at their own pace, through experimenting</em>, using music, movement, and fun challenges to build a love of learning and get them ready for school.</p>
     <p><strong>This is the independence class.</strong> Parents stop spotting heavily here. The job shifts to following along and keeping their child safe rather than guiding every movement. It's as much a transition for the parent as the child, because by the time a child turns three, we want parents comfortable watching from the lobby, and children able to take direction from a coach rather than only from a parent or guardian.</p>
 
@@ -239,11 +245,11 @@
       <li>Mon 12:10pm · Tue 9:10am · Wed 5:00pm · Thu 10:15am</li>
       <li>Sat 8:30am · Sun 8:45am</li>
     </ul>
-    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Beasts</div><div class="v">19 – 30 months (weekends)</div></div>
+    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Beasts</div><div class="v">20 – 30 months (weekends)</div></div>
     <ul><li>Sat 9:15am · Sun 9:30am</li></ul>
-    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Beast / Super Beasts</div><div class="v">19 – 35 months (weekdays)</div></div>
+    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Beast / Super Beasts</div><div class="v">20 – 36 months (weekdays, combined)</div></div>
     <ul><li>Mon 10:15am · Tue 10:00am · Wed 4:10pm &amp; 5:45pm · Thu 9:15am</li></ul>
-    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Super Beasts</div><div class="v">29 – 36 months (weekends)</div></div>
+    <div class="fact-row" style="margin-top:.6rem;"><div class="k">Super Beasts</div><div class="v">30 – 36 months (weekends)</div></div>
     <ul><li>Sat 10:00am · Sun 10:15am</li></ul>
 
     <p style="margin:1.1rem 0 .2rem;"><strong>Pre-K</strong> <span style="font-weight:400;color:var(--muted);">— 3 – 6 yrs, child solo</span></p>
