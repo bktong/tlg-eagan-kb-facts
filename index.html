@@ -21,6 +21,9 @@
   design reasoning.
 
   SOURCE OF TRUTH this page mirrors: gyms/eaganmn/gym.json -> publicFacts.
+  Values wrapped in fact:KEY comment markers are STAMPED from gym.json by
+  scripts/sync-facts.mjs (2026-11-10); deploy-facts.sh refuses to ship if they
+  drift. Edit gym.json, run the script, never hand-edit a marked value.
   This is a HAND-AUTHORED rendering, not auto-generated (same pattern as
   welcome-guide.html) — if gym.json's publicFacts changes, this page needs
   a matching manual edit. Last synced against gym.json: 2026-08-02.
@@ -155,7 +158,7 @@
 
   <header class="hero">
     <h1>The Little Gym of Eagan</h1>
-    <p>We help children ages 4 months to 12 years grow strong, confident, and happy through gymnastics-based classes, camps, and birthday parties — built around motor skill development, early learning, and social-emotional growth.</p>
+    <p>We help children ages <!--fact:minAge-->4 months<!--/fact--> to 12 years grow strong, confident, and happy through gymnastics-based classes, camps, and birthday parties — built around motor skill development, early learning, and social-emotional growth.</p>
   </header>
 
   <section>
@@ -181,7 +184,7 @@
 
   <section>
     <h2><span class="dot"></span>Ages &amp; Programs</h2>
-    <p>Ages <strong>4 months to 12 years</strong>. Parent &amp; Child, Pre-K, and Grade School classes.</p>
+    <p>Ages <strong><!--fact:minAge-->4 months<!--/fact--> to 12 years</strong>. Parent &amp; Child, Pre-K, and Grade School classes.</p>
   </section>
 
   <section>
@@ -256,9 +259,9 @@
     <h2><span class="dot"></span>Birthday Parties</h2>
     <p>Completely hassle-free — our staff runs the whole thing start to finish. Honestly, all you bring is the cupcakes.</p>
     <p>90 minutes total — 60 minutes in the gym, 30 minutes after in our party room for snacks and drinks. We handle decorations, drinks, table setup, and cleanup.</p>
-    <div class="fact-row"><div class="k">Price</div><div class="v">$399</div></div>
-    <div class="fact-row"><div class="k">Theme upgrade</div><div class="v">$474</div></div>
-    <div class="fact-row"><div class="k">Available slots</div><div class="v">Saturdays and Sundays, 2:00pm or 4:30pm</div></div>
+    <div class="fact-row"><div class="k">Price</div><div class="v"><!--fact:parties.price-->$399<!--/fact--></div></div>
+    <div class="fact-row"><div class="k">Theme upgrade</div><div class="v"><!--fact:parties.themeUpgradePrice-->$474<!--/fact--></div></div>
+    <div class="fact-row"><div class="k">Available slots</div><div class="v"><!--fact:parties.slots-->Saturdays and Sundays, 2:00pm or 4:30pm<!--/fact--></div></div>
     <div class="fact-row"><div class="k">Book</div><div class="v"><a href="https://tlgurl.com/bday">tlgurl.com/bday</a></div></div>
     <div class="fact-row"><div class="k">Party guide</div><div class="v"><a href="https://tlgurl.com/bdayguide">tlgurl.com/bdayguide</a></div></div>
     <p class="note">The booking link opens to a day's schedule, not one specific time slot — pair it with the exact class/time when quoting a booking.</p>
